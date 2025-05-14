@@ -300,6 +300,44 @@ func main() {
 		return c.JSON(http.StatusOK, books)
 	})
 
+	e.POST("/api/books", func(c echo.Context) error {
+		// Create a new BookStore struct to hold the incoming data
+		var newBook BookStore
+
+		// Parse JSON from request body into newBook struct
+		if err := c.Bind(&newBook); err != nil {
+			return c.JSON(http.StatusBadRequest, map[string]string{
+				"error": "Invalid request body",
+			})
+		}
+
+		// Generate a unique ID if one wasn't provided
+		if newBook.ID == "" {
+			newBook.ID = primitive.NewObjectID().Hex()[:8] // Simple ID generation
+		}
+
+		// Insert the book into the database
+		_, err := coll.InsertOne(context.TODO(), newBook)
+		if err != nil {
+			return c.JSON(http.StatusInternalServerError, map[string]string{
+				"error": "Failed to create book",
+			})
+		}
+
+		// Format the response in the same way as GET /api/books returns data
+		response := map[string]interface{}{
+			"id":      newBook.ID,
+			"title":   newBook.BookName,
+			"author":  newBook.BookAuthor,
+			"pages":   newBook.BookPages,
+			"edition": newBook.BookEdition,
+			"year":    newBook.BookYear,
+		}
+
+		// Return 201 Created with the newly created book
+		return c.JSON(http.StatusCreated, response)
+	})
+
 	// We start the server and bind it to port 3030. For future references, this
 	// is the application's port and not the external one. For this first exercise,
 	// they could be the same if you use a Cloud Provider. If you use ngrok or similar,
