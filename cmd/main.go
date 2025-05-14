@@ -177,6 +177,28 @@ func findAllBooks(coll *mongo.Collection) []map[string]interface{} {
 	return ret
 }
 
+func getAllBooksForAPI(coll *mongo.Collection) []map[string]interface{} {
+	cursor, err := coll.Find(context.TODO(), bson.D{{}})
+	var results []BookStore
+	if err = cursor.All(context.TODO(), &results); err != nil {
+		panic(err)
+	}
+
+	var ret []map[string]interface{}
+	for _, res := range results {
+		ret = append(ret, map[string]interface{}{
+			"id":      res.ID,
+			"title":   res.BookName,
+			"author":  res.BookAuthor,
+			"pages":   res.BookPages,
+			"edition": res.BookEdition,
+			"year":    res.BookYear,
+		})
+	}
+
+	return ret
+}
+
 func findAllAuthors(coll *mongo.Collection) []map[string]interface{} {
 	cursor, err := coll.Find(context.TODO(), bson.D{{}})
 	var results []BookStore
@@ -274,7 +296,7 @@ func main() {
 	// It specifies the expected returned codes for each type of request
 	// method.
 	e.GET("/api/books", func(c echo.Context) error {
-		books := findAllBooks(coll)
+		books := getAllBooksForAPI(coll)
 		return c.JSON(http.StatusOK, books)
 	})
 
