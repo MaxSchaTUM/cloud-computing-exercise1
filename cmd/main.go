@@ -303,19 +303,34 @@ func main() {
 	})
 
 	e.POST("/api/books", func(c echo.Context) error {
-		// Create a new BookStore struct to hold the incoming data
-		var newBook BookStore
-
-		// Parse JSON from request body into newBook struct
-		if err := c.Bind(&newBook); err != nil {
+		// Parse the incoming JSON with the client-side format
+		var requestData map[string]string
+		if err := c.Bind(&requestData); err != nil {
 			return c.JSON(http.StatusBadRequest, map[string]string{
 				"error": "Invalid request body",
 			})
 		}
 
-		// Generate a unique ID if one wasn't provided
-		if newBook.ID == "" {
-			newBook.ID = primitive.NewObjectID().Hex()[:8] // Simple ID generation
+		// Extract fields with appropriate validation
+		id, hasID := requestData["id"]
+		title, hasTitle := requestData["title"]
+		author, hasAuthor := requestData["author"]
+
+		// Check for required fields
+		if !hasID || id == "" || !hasTitle || title == "" || !hasAuthor || author == "" {
+			return c.JSON(http.StatusBadRequest, map[string]string{
+				"error": "Missing required fields: id, title, and author are mandatory",
+			})
+		}
+
+		// Create a BookStore object from the request data
+		newBook := BookStore{
+			ID:          id,
+			BookName:    title,
+			BookAuthor:  author,
+			BookPages:   requestData["pages"],   // Optional fields
+			BookEdition: requestData["edition"], // Optional fields
+			BookYear:    requestData["year"],    // Optional fields
 		}
 
 		// Check if a book with this ID already exists
