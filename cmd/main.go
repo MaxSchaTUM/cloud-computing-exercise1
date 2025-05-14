@@ -252,7 +252,7 @@ func main() {
 
 	e.GET("/authors", func(c echo.Context) error {
 		authors := findAllAuthors(coll)
-		return c.Render(200, "book-table", authors)
+		return c.Render(200, "authors", authors)
 	})
 
 	e.GET("/years", func(c echo.Context) error {

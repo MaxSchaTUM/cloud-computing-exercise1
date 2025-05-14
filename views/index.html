@@ -89,3 +89,12 @@
   <label>Search parameter</label>
 </div>
 {{ end }}
+
+{{ block "authors" . }}
+<ul></ul>
+{{ range . }}
+  <li> {{ .BookAuthor }} </li>
+{{ end }}
+</ul>
+{{ end }}
+
