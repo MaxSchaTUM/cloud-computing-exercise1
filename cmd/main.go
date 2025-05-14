@@ -393,6 +393,32 @@ func main() {
 		return c.NoContent(http.StatusOK)
 	})
 
+	e.DELETE("/api/books/:id", func(c echo.Context) error {
+		// Get the ID from path parameter
+		id := c.Param("id")
+
+		// Create filter to find the book by ID (not MongoID)
+		filter := bson.M{"id": id}
+
+		// Perform the deletion
+		result, err := coll.DeleteOne(context.TODO(), filter)
+		if err != nil {
+			return c.JSON(http.StatusInternalServerError, map[string]string{
+				"error": "Failed to delete book",
+			})
+		}
+
+		// Check if any document was actually deleted
+		if result.DeletedCount == 0 {
+			return c.JSON(http.StatusNotFound, map[string]string{
+				"error": "Book not found",
+			})
+		}
+
+		// Return 200 OK as specified in the requirements
+		return c.NoContent(http.StatusOK)
+	})
+
 	// We start the server and bind it to port 3030. For future references, this
 	// is the application's port and not the external one. For this first exercise,
 	// they could be the same if you use a Cloud Provider. If you use ngrok or similar,
