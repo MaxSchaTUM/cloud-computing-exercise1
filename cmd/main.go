@@ -338,6 +338,61 @@ func main() {
 		return c.JSON(http.StatusCreated, response)
 	})
 
+	e.PUT("/api/books/:id", func(c echo.Context) error {
+		// Get the ID from path parameter
+		id := c.Param("id")
+
+		// Parse request body
+		var requestData map[string]string
+		if err := c.Bind(&requestData); err != nil {
+			return c.JSON(http.StatusBadRequest, map[string]string{
+				"error": "Invalid request body",
+			})
+		}
+
+		// Find the book by ID (not MongoID)
+		filter := bson.M{"id": id}
+		var existingBook BookStore
+		err := coll.FindOne(context.TODO(), filter).Decode(&existingBook)
+		if err != nil {
+			if err == mongo.ErrNoDocuments {
+				return c.JSON(http.StatusNotFound, map[string]string{
+					"error": "Book not found",
+				})
+			}
+			return c.JSON(http.StatusInternalServerError, map[string]string{
+				"error": "Database error",
+			})
+		}
+
+		// Update fields from request
+		if title, ok := requestData["title"]; ok && title != "" {
+			existingBook.BookName = title
+		}
+		if author, ok := requestData["author"]; ok && author != "" {
+			existingBook.BookAuthor = author
+		}
+		if edition, ok := requestData["edition"]; ok && edition != "" {
+			existingBook.BookEdition = edition
+		}
+		if pages, ok := requestData["pages"]; ok && pages != "" {
+			existingBook.BookPages = pages
+		}
+		if year, ok := requestData["year"]; ok && year != "" {
+			existingBook.BookYear = year
+		}
+
+		// Update the book in the database
+		_, err = coll.ReplaceOne(context.TODO(), filter, existingBook)
+		if err != nil {
+			return c.JSON(http.StatusInternalServerError, map[string]string{
+				"error": "Failed to update book",
+			})
+		}
+
+		return c.NoContent(http.StatusOK)
+	})
+
 	// We start the server and bind it to port 3030. For future references, this
 	// is the application's port and not the external one. For this first exercise,
 	// they could be the same if you use a Cloud Provider. If you use ngrok or similar,
