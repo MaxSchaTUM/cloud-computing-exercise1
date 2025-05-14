@@ -278,7 +278,8 @@ func main() {
 	})
 
 	e.GET("/years", func(c echo.Context) error {
-		return c.NoContent(http.StatusNoContent)
+		books := findAllBooks(coll)
+		return c.Render(200, "years", books)
 	})
 
 	e.GET("/search", func(c echo.Context) error {
