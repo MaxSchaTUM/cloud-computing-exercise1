@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	"html/template"
@@ -8,10 +9,10 @@ import (
 	"log"
 	"net/http"
 	"slices"
+	"strings"
 	"time"
 
 	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -255,7 +256,7 @@ func main() {
 
 	// Log the requests. Please have a look at echo's documentation on more
 	// middleware
-	e.Use(middleware.Logger())
+	e.Use(LoggerRR)
 
 	e.Static("/css", "css")
 
@@ -443,4 +444,76 @@ func main() {
 	// In the submission website for this exercise, you will have to provide the internet-reachable
 	// endpoint: http://<host>:<external-port>
 	e.Logger.Fatal(e.Start(":3030"))
+}
+
+// LoggerRR (Request-Response) is a drop-in replacement for echo/middleware.Logger().
+func LoggerRR(next echo.HandlerFunc) echo.HandlerFunc {
+	return func(c echo.Context) error {
+		req := c.Request()
+		res := c.Response()
+
+		// ----- Clone request body so handlers can still read it -----
+		var reqBody []byte
+		if req.Body != nil {
+			reqBody, _ = io.ReadAll(req.Body)
+			req.Body = io.NopCloser(bytes.NewBuffer(reqBody)) // restore
+		}
+
+		// ----- Wrap the ResponseWriter to capture response body -----
+		blw := &bodyLogWriter{ResponseWriter: res.Writer, buf: new(bytes.Buffer)}
+		res.Writer = blw
+
+		start := time.Now()
+		err := next(c)
+		elapsed := time.Since(start)
+
+		// ----- Build nicely formatted output -----
+		fmt.Printf(`
+────────────────────────────────────────────────────────────
+%s %s  (%.0f ms)
+
+Request headers
+%s
+Request body
+%s
+
+→ %d %s
+Response headers
+%s
+Response body
+%s
+────────────────────────────────────────────────────────────
+`,
+			req.Method, req.URL.Path, float64(elapsed.Milliseconds()),
+			formatHeaders(req.Header),
+			string(reqBody),
+			res.Status, http.StatusText(res.Status),
+			formatHeaders(res.Header()),
+			blw.buf.String(),
+		)
+
+		return err
+	}
+}
+
+type bodyLogWriter struct {
+	http.ResponseWriter
+	buf *bytes.Buffer
+}
+
+func (w *bodyLogWriter) Write(b []byte) (int, error) {
+	w.buf.Write(b)                   // capture
+	return w.ResponseWriter.Write(b) // continue normal write
+}
+
+// helper: pretty-print headers
+func formatHeaders(h http.Header) string {
+	if len(h) == 0 {
+		return "(none)\n"
+	}
+	var sb strings.Builder
+	for k, v := range h {
+		sb.WriteString(fmt.Sprintf("  %s: %s\n", k, strings.Join(v, ", ")))
+	}
+	return sb.String()
 }
