@@ -316,8 +316,24 @@ func main() {
 			newBook.ID = primitive.NewObjectID().Hex()[:8] // Simple ID generation
 		}
 
+		// Check if a book with this ID already exists
+		filter := bson.M{"id": newBook.ID}
+		existingCount, err := coll.CountDocuments(context.TODO(), filter)
+		if err != nil {
+			return c.JSON(http.StatusInternalServerError, map[string]string{
+				"error": "Failed to check for existing book",
+			})
+		}
+
+		// If a book with this ID already exists, return an error
+		if existingCount > 0 {
+			return c.JSON(http.StatusConflict, map[string]string{
+				"error": "A book with this ID already exists",
+			})
+		}
+
 		// Insert the book into the database
-		_, err := coll.InsertOne(context.TODO(), newBook)
+		_, err = coll.InsertOne(context.TODO(), newBook)
 		if err != nil {
 			return c.JSON(http.StatusInternalServerError, map[string]string{
 				"error": "Failed to create book",
