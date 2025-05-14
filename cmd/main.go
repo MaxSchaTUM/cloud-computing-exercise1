@@ -177,6 +177,29 @@ func findAllBooks(coll *mongo.Collection) []map[string]interface{} {
 	return ret
 }
 
+func findAllAuthors(coll *mongo.Collection) []map[string]interface{} {
+	cursor, err := coll.Find(context.TODO(), bson.D{{}})
+	var results []BookStore
+	if err = cursor.All(context.TODO(), &results); err != nil {
+		panic(err)
+	}
+
+	var ret []map[string]interface{}
+	for _, res := range results {
+		ret = append(ret, map[string]interface{}{
+			"ID":         res.MongoID.Hex(),
+			"BookAuthor": res.BookAuthor,
+		})
+	}
+
+	// print ret
+	for _, r := range ret {
+		fmt.Printf("%+v\n", r)
+	}
+
+	return ret
+}
+
 func main() {
 	// Connect to the database. Such defer keywords are used once the local
 	// context returns; for this case, the local context is the main function
@@ -228,7 +251,8 @@ func main() {
 	})
 
 	e.GET("/authors", func(c echo.Context) error {
-		return c.NoContent(http.StatusNoContent)
+		authors := findAllAuthors(coll)
+		return c.Render(200, "book-table", authors)
 	})
 
 	e.GET("/years", func(c echo.Context) error {
