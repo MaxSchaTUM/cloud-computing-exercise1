@@ -1,0 +1,64 @@
+version: '3.8'
+services:
+  root:
+    build:
+      context: .
+      dockerfile: Dockerfile.root
+    ports:
+      - "3030:3030"
+    environment:
+      - DATABASE_URI=${DATABASE_URI}
+    depends_on: []
+
+  get_books:
+    build:
+      context: .
+      dockerfile: Dockerfile.get_books
+    ports:
+      - "3031:3031"
+    environment:
+      - DATABASE_URI=${DATABASE_URI}
+    depends_on: []
+
+  post_books:
+    build:
+      context: .
+      dockerfile: Dockerfile.post_books
+    ports:
+      - "3032:3032"
+    environment:
+      - DATABASE_URI=${DATABASE_URI}
+    depends_on: []
+
+  put_books:
+    build:
+      context: .
+      dockerfile: Dockerfile.put_books
+    ports:
+      - "3033:3033"
+    environment:
+      - DATABASE_URI=${DATABASE_URI}
+    depends_on: []
+
+  delete_books:
+    build:
+      context: .
+      dockerfile: Dockerfile.delete_books
+    ports:
+      - "3034:3034"
+    environment:
+      - DATABASE_URI=${DATABASE_URI}
+    depends_on: []
+
+  nginx:
+    image: nginx:1.25
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - root
+      - get_books
+      - post_books
+      - put_books
+      - delete_books 

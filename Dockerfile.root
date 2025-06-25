@@ -1,0 +1,15 @@
+# ---- Build stage ----
+FROM golang:1.22-alpine AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o root_handler ./cmd/root.go
+
+# ---- Run stage ----
+FROM alpine:latest
+WORKDIR /app
+COPY --from=builder /app/root_handler ./root_handler
+COPY views ./views
+COPY css ./css
+ENV DATABASE_URI=""
+EXPOSE 3030
+CMD ["./root_handler"] 

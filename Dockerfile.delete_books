@@ -1,0 +1,13 @@
+# ---- Build stage ----
+FROM golang:1.22-alpine AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o delete_books_handler ./cmd/delete_books.go
+
+# ---- Run stage ----
+FROM alpine:latest
+WORKDIR /app
+COPY --from=builder /app/delete_books_handler ./delete_books_handler
+ENV DATABASE_URI=""
+EXPOSE 3034
+CMD ["./delete_books_handler"] 
