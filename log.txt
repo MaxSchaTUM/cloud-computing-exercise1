@@ -1,0 +1,2020 @@
+{MongoID:ObjectID("6824a2d7f90941b7ad7f5ad9") ID:example1 BookName:The Vortex BookAuthor:José Eustasio Rivera BookEdition:958-30-0804-4 BookPages:292 BookYear:1924}
+{MongoID:ObjectID("6824a2d7f90941b7ad7f5ada") ID:example2 BookName:Frankenstein BookAuthor:Mary Shelley BookEdition:978-3-649-64609-9 BookPages:280 BookYear:1818}
+{MongoID:ObjectID("6824a2d7f90941b7ad7f5adb") ID:example3 BookName:The Black Cat BookAuthor:Edgar Allan Poe BookEdition:978-3-99168-238-7 BookPages:280 BookYear:1843}
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.12.0
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:3030
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 129
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+{"id":"547307","title":"Alex Homer, ASP.NET 2.0 Visual Web Developer 2005","author":"David Sussman","year":"2006","pages":"314"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"547307","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  Connection: close
+  Content-Length: 185
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+{"id":"740977","title":"Art of Java Web Development: Struts, Tapestry, Commons, Velocity, JUnit, Axis, Cocoon, InternetBeans, WebWork","author":"Neal Ford","year":"2003","pages":"624"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"740977","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 219
+
+Request body
+{"id":"643503","title":"CakePHP Application Development: Step-by-step introduction to rapid web development using the open-source MVC CakePHP framework","author":"Ahsanul Bari, Anupom Syam","year":"2008","pages":"328"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"643503","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 99
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+{"id":"2375753","title":"Flask Web Development","author":"Miguel Grinberg","year":"0","pages":"0"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 140
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"682507","title":"Professional JavaScript for Web Developers","author":"Nicholas C. Zakas","year":"2009","edition":"2","pages":"841"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"682507","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 131
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"1159094","title":"Beginning PHP 6, Apache, MySQL 6 Web Development","author":"Timothy Boronczyk","year":"2009","pages":"0"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/547307  (2 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 111
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"547307","title":"Visual Web Dev with ASP.NET 2.0","author":"David Sussman","year":"2008","pages":"299"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/643503  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 110
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"643503","title":"CakePHP Essentials","author":"Ahsanul Bari, Anupom Syam","year":"2011","pages":"340"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/682507  (2 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 133
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"682507","title":"Professional JavaScript for the Web","author":"Nicholas C. Zakas","year":"2012","edition":"2","pages":"855"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/547307  (1 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/643503  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/682507  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/740977  (1 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/2375753  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/1159094  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 129
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"547307","title":"Alex Homer, ASP.NET 2.0 Visual Web Developer 2005","author":"David Sussman","year":"2006","pages":"314"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"547307","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  Connection: close
+  Content-Length: 185
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+{"id":"740977","title":"Art of Java Web Development: Struts, Tapestry, Commons, Velocity, JUnit, Axis, Cocoon, InternetBeans, WebWork","author":"Neal Ford","year":"2003","pages":"624"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"740977","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 219
+
+Request body
+{"id":"643503","title":"CakePHP Application Development: Step-by-step introduction to rapid web development using the open-source MVC CakePHP framework","author":"Ahsanul Bari, Anupom Syam","year":"2008","pages":"328"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"643503","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 99
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"2375753","title":"Flask Web Development","author":"Miguel Grinberg","year":"0","pages":"0"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 140
+  User-Agent: Go-http-client/1.1
+
+Request body
+{"id":"682507","title":"Professional JavaScript for Web Developers","author":"Nicholas C. Zakas","year":"2009","edition":"2","pages":"841"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"682507","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  Connection: close
+  Content-Length: 131
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+{"id":"1159094","title":"Beginning PHP 6, Apache, MySQL 6 Web Development","author":"Timothy Boronczyk","year":"2009","pages":"0"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/547307  (1 ms)
+
+Request headers
+  Connection: close
+  Content-Length: 111
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+{"id":"547307","title":"Visual Web Dev with ASP.NET 2.0","author":"David Sussman","year":"2008","pages":"299"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/643503  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 110
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"643503","title":"CakePHP Essentials","author":"Ahsanul Bari, Anupom Syam","year":"2011","pages":"340"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/682507  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 133
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"682507","title":"Professional JavaScript for the Web","author":"Nicholas C. Zakas","year":"2012","edition":"2","pages":"855"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/547307  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/643503  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/682507  (0 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/740977  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/2375753  (0 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/1159094  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 129
+  User-Agent: Go-http-client/1.1
+
+Request body
+{"id":"547307","title":"Alex Homer, ASP.NET 2.0 Visual Web Developer 2005","author":"David Sussman","year":"2006","pages":"314"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"547307","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 185
+
+Request body
+{"id":"740977","title":"Art of Java Web Development: Struts, Tapestry, Commons, Velocity, JUnit, Axis, Cocoon, InternetBeans, WebWork","author":"Neal Ford","year":"2003","pages":"624"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"740977","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 219
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"643503","title":"CakePHP Application Development: Step-by-step introduction to rapid web development using the open-source MVC CakePHP framework","author":"Ahsanul Bari, Anupom Syam","year":"2008","pages":"328"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"643503","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (2 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 99
+
+Request body
+{"id":"2375753","title":"Flask Web Development","author":"Miguel Grinberg","year":"0","pages":"0"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  Connection: close
+  Content-Length: 140
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+{"id":"682507","title":"Professional JavaScript for Web Developers","author":"Nicholas C. Zakas","year":"2009","edition":"2","pages":"841"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"682507","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+POST /api/books  (1 ms)
+
+Request headers
+  Connection: close
+  Content-Length: 131
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+{"id":"1159094","title":"Beginning PHP 6, Apache, MySQL 6 Web Development","author":"Timothy Boronczyk","year":"2009","pages":"0"}
+
+
+→ 201 Created
+Response headers
+  Content-Type: application/json
+
+Response body
+{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"547307","pages":"","title":"","year":""},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"643503","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"682507","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/547307  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 111
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+{"id":"547307","title":"Visual Web Dev with ASP.NET 2.0","author":"David Sussman","year":"2008","pages":"299"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/643503  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 110
+  User-Agent: Go-http-client/1.1
+
+Request body
+{"id":"643503","title":"CakePHP Essentials","author":"Ahsanul Bari, Anupom Syam","year":"2011","pages":"340"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+PUT /api/books/682507  (1 ms)
+
+Request headers
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  Content-Length: 133
+
+Request body
+{"id":"682507","title":"Professional JavaScript for the Web","author":"Nicholas C. Zakas","year":"2012","edition":"2","pages":"855"}
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"David Sussman","edition":"","id":"547307","pages":"299","title":"Visual Web Dev with ASP.NET 2.0","year":"2008"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/547307  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"Ahsanul Bari, Anupom Syam","edition":"","id":"643503","pages":"340","title":"CakePHP Essentials","year":"2011"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/643503  (0 ms)
+
+Request headers
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"Nicholas C. Zakas","edition":"2","id":"682507","pages":"855","title":"Professional JavaScript for the Web","year":"2012"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/682507  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"740977","pages":"","title":"","year":""},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/740977  (1 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"2375753","pages":"","title":"","year":""},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/2375753  (0 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"},{"author":"","edition":"","id":"1159094","pages":"","title":"","year":""}]
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+DELETE /api/books/1159094  (1 ms)
+
+Request headers
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+  Content-Type: application/json
+  Accept-Encoding: gzip
+
+Request body
+
+
+→ 200 OK
+Response headers
+(none)
+
+Response body
+
+────────────────────────────────────────────────────────────
+
+────────────────────────────────────────────────────────────
+GET /api/books  (0 ms)
+
+Request headers
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  X-Real-Ip: 131.159.35.164
+  Connection: close
+  User-Agent: Go-http-client/1.1
+
+Request body
+
+
+→ 200 OK
+Response headers
+  Content-Type: application/json
+
+Response body
+[{"author":"José Eustasio Rivera","edition":"958-30-0804-4","id":"example1","pages":"292","title":"The Vortex","year":"1924"},{"author":"Mary Shelley","edition":"978-3-649-64609-9","id":"example2","pages":"280","title":"Frankenstein","year":"1818"},{"author":"Edgar Allan Poe","edition":"978-3-99168-238-7","id":"example3","pages":"280","title":"The Black Cat","year":"1843"}]
+
+────────────────────────────────────────────────────────────
